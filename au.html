@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card landing page</title>
+    <link rel="stylesheet" href="./images/bootstrap.min.css">
+    <style>
+        footer p {
+            text-align: center;
+            padding: 0;
+            font-size: 10px;
+        }
+
+        #form-section {
+            display: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(90deg, #30333C 50%, #31343D 100%);
+            background-color: #30333C;
+            color: white;
+        }
+
+        .header {
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: white;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            border: 1px solid transparent;
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .title {
+            margin-top: 30px;
+            height: 10vh;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .offer {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid transparent;
+        }
+
+        .card-img {
+            width: 80%;
+        }
+
+        .apply {
+            width: 80%;
+            padding: 15px;
+            font-size: 18px;
+            margin-top: 10px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: black;
+            background-color: whitesmoke;
+            font-weight: 500;
+            box-shadow: inset -4px -2px 4px rgba(255, 255, 255, 0.3);
+        }
+
+        .submit {
+            width: 90%;
+            padding: 10px 15px;
+            font-size: 18px;
+            margin-top: 10px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(82, 157, 255);
+            font-weight: 500;
+            box-shadow: inset -4px -2px 4px rgba(255, 255, 255, 0.3);
+            margin-top: 20px;
+        }
+
+        .text-field {
+            width: 90%;
+            padding: 10px 15px;
+            font-size: 18px;
+            margin-top: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            font-weight: 500;
+            box-shadow: inset -4px -2px 4px rgba(255, 255, 255, 0.3);
+            margin-top: 20px;
+        }
+
+        .line {
+            font-size: 14px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            body {
+                display: none;
+            }
+        }
+
+        .form-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+        }
+
+        .form {
+            width: 80%;
+            color: black;
+            background-color: white;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .mt-2 {
+            margin-top: 10px;
+        }
+
+        ul {
+            margin-left: 40px;
+            padding: 8px;
+            padding-right: 40px;
+        }
+
+        li {
+            padding: 5px;
+            font-size: 12px;
+            list-style: none;
+            display: flex;
+            align-items: start;
+        }
+
+        .sub-text {
+            margin-top: 10px;
+        }
+
+        .icon {
+            width: 40px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./images/logo.webp" alt="" style="height: 50%;">
+        <img src="./images/brand.webp" alt="" style="height: 50%;">
+    </div>
+    <div class="title">
+        <h2 style="margin-bottom: 5px;">Congratulations</h2>
+        <p>Best credit offer for you</p>
+    </div>
+    <div class="offer">
+        <img src="./images/card.svg" alt="" class="card-img">
+        <p class="sub-text">No Joining Fees</p>
+        <button class="apply" onclick="mobile()">Apply Now</button>
+        <div style="display: flex; align-items: center; justify-content: center; width: 80vw; margin-top: 20px;">
+            <div class="point" style="display: flex; align-items: center; justify-content: center; width: 50%; flex-direction: column;">
+                <img src="./images/Percentage.webp" alt="" width="25%">
+                <p class="line" style="padding-top: 10px; font-weight: 800;">Low Interest Rates</p>
+            </div>
+            <div class="point" style="display: flex; align-items: center; justify-content: center; width: 50%; flex-direction: column;">
+                <img src="./images/Time.webp" alt="" width="25%">
+                <p class="line" style="padding-top: 10px; font-weight: 800;">Instant Approval</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
+        <ul>
+            <li><img src="./images/tick.svg" class="icon" alt="">
+                <p>Welcome Benefit</p>
+            </li>
+            <li><img src="./images/tick.svg" class="icon" alt="">
+                <p>More Spends, More Rewards</p>
+            </li>
+            <li><img src="./images/tick.svg" class="icon" alt="">
+                <p>Monthly Milestone Benefit</p>
+            </li>
+            <li><img src="./images/tick.svg" class="icon" alt="">
+                <p>LOUNGE IN LUXURY & TRAVEL IN COMFORT</p>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div class="form-section" id="form-section">
+        <span style="color: black; position: absolute; top: 20%; left: 8%; background-color: white; border: 1px solid transparent; border-radius: 50%; width: 30px; height: 30px; text-align: center; display: flex; align-items: center; justify-content: center;" onclick="back()">X</span>
+        <div class="form">
+            <h3 class="mt-2" style="margin-bottom: 10px;">Check your Eligibility</h3>
+            <input type="number" placeholder="Enter your mobile number" class="mt-2 text-field" id="number" style="margin-bottom: 0px;">
+            <div class="mt-2" style="margin-bottom: 8px; width: 90%; display: flex; align-items: center; justify-content: center;">
+                <input type="checkbox" id="check" checked>
+                <p style="padding-left: 10px; font-size: 11px; text-align: left;  margin-bottom: 0px;">By clicking on this you agree to our
+                    <a href="#" style="color: skyblue;">Term and conditions</a>
+                </p>
+            </div>
+            <button class="mt-2 submit" type="submit" onclick="submit()">Check eligibility</button>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <p>copyrights @ 2024</p>
+    </footer>
+    <script>
+        function mobile() {
+            document.getElementById('form-section').style.display = "flex";
+        }
+        function back() {
+            document.getElementById('form-section').style.display = "none";
+        }
+
+        function submit() {
+            var flag = true;
+            var num = document.getElementById('number').value;
+            if (num === 'null' || num.length !== 10) {
+                flag = false;
+            }
+            if (flag) {
+                window.location.href = "www.google.com"
+            } else {
+                alert('Enter 10 digit mobile number');
+            }
+        }
+
+    </script>
+    <script src="./images/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
